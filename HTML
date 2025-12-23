@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Hub - Пошук фільмів</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-film"></i> Movie Hub</h1>
+            <nav class="nav">
+                <a href="#" class="nav-link active" data-category="popular">Популярні</a>
+                <a href="#" class="nav-link" data-category="top_rated">Топ рейтинг</a>
+                <a href="#" class="nav-link" data-category="upcoming">Очікувані</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="search-section">
+                <input type="text" id="searchInput" placeholder="Пошук фільмів..." class="search-input">
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="filter-section">
+                <select id="genreFilter" class="filter-select">
+                    <option value="">Всі жанри</option>
+                    <option value="28">Екшн</option>
+                    <option value="12">Пригоди</option>
+                    <option value="16">Анімація</option>
+                    <option value="35">Комедія</option>
+                    <option value="80">Кримінал</option>
+                    <option value="18">Драма</option>
+                    <option value="27">Жахи</option>
+                    <option value="10749">Романтика</option>
+                    <option value="878">Фантастика</option>
+                </select>
+                
+                <select id="yearFilter" class="filter-select">
+                    <option value="">Всі роки</option>
+                </select>
+            </div>
+
+            <div id="moviesContainer" class="movies-grid">
+                <!-- Фільми будуть додані тут -->
+            </div>
+
+            <div id="loading" class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Завантаження...
+            </div>
+
+            <div id="pagination" class="pagination">
+                <button id="prevBtn" class="page-btn">← Попередня</button>
+                <span id="pageInfo" class="page-info">Сторінка 1</span>
+                <button id="nextBtn" class="page-btn">Наступна →</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Movie Hub. Дані надані <a href="https://www.themoviedb.org/" target="_blank">TMDb</a></p>
+            <p><small>Цей продукт використовує TMDb API, але не схвалений або сертифікований TMDb.</small></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
